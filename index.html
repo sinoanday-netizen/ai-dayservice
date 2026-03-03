@@ -50,53 +50,55 @@
             </div>
             <div class="service-card">
                 <span class="service-icon">🤖</span>
-                <h3>AI技術でサービスの質の向上</h3>
-                <p>最新のAIシステムが学習データを分析し、あなたに最適な難易度の脳トレを提供。無理なく効果的に認知機能の維持・改善を目指せます。</p>
+                <h3>AI技術で、もっと“人”に向き合う。</h3>
+                <p>最新のAIを活用し、脳トレの質を高めると同時に、記録や事務作業を効率化。スタッフがご利用者様と向き合う時間を、これまで以上に大切にしています。</p>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="section-title">
-            <h2>お問い合わせ</h2>
-            <p>最新のAI脳トレ体験や、授業の雰囲気を見てみませんか？<br>お気軽に見学にお越しください。</p>
-            <div class="address-box">
-                <p>📍 福岡市東区香椎駅前2-4-9</p>
-            </div>
-            <div class="map-container">
+    <section id="contact" style="padding: 60px 20px; background-color: #fdfaf5;">
+        <div
+            style="max-width: 800px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <h2 style="text-align: center; color: #d38d5f; margin-bottom: 30px; font-size: 24px;">アクセス ＆ お問い合わせ</h2>
+
+            <div style="margin-bottom: 40px; border-radius: 10px; overflow: hidden; height: 300px;">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.439628236683!2d130.4414679757988!3d33.66069907330725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35418e3857d47715%3A0xc39bc67e03490906!2z44CSODEzLTAwMTMg56aP5bKh55yM56aP5bKh5biC5p2x5Yy66aaZ5qOO6aeF5YmN77yS5LiB55uu77yU4oiS77yZ!5e0!3m2!1sja!2sjp!4v1707880000000!5m2!1sja!2sjp"
-                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.439832743849!2d130.4435858763566!3d33.64574973873499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35418e2689ca589b%3A0xc3f6050a41707018!2z44CSODEzLTAwMTMg56aP5bKh55yM56aP5bKh5biC5p2x5Yy66aaZ5q椎6aeF5YmN77yS5LiB55uu77yU4oiS77yZ!5e0!3m2!1sja!2sjp!4v1715844444444!5m2!1sja!2sjp"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
-        </div>
-        <div class="contact-container">
-            <form action="mailto:sinoanday@gmail.com" method="post" enctype="text/plain">
-                <div class="form-group">
-                    <label for="name">お名前</label>
-                    <input type="text" id="name" required placeholder="山田 太郎">
+
+            <form action="https://formspree.io/f/mdalvrkq" method="POST">
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: bold;">お名前</label>
+                    <input type="text" name="name" required
+                        style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box;">
                 </div>
-                <div class="form-group">
-                    <label for="tel">電話番号</label>
-                    <input type="tel" id="tel" required placeholder="03-1234-5678">
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: bold;">メールアドレス</label>
+                    <input type="email" name="email" required
+                        style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box;">
                 </div>
-                <div class="form-group">
-                    <label for="message">ご相談・ご質問</label>
-                    <textarea id="message" rows="5" required placeholder="体験希望、資料請求など"></textarea>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: bold;">電話番号</label>
+                    <input type="tel" name="tel"
+                        style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box;">
                 </div>
-                <button type="submit" class="submit-btn">送信する</button>
+                <div style="margin-bottom: 25px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: bold;">ご相談・ご質問</label>
+                    <textarea name="message" required
+                        style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; height: 120px; box-sizing: border-box;"></textarea>
+                </div>
+                <button type="submit"
+                    style="width: 100%; padding: 15px; background-color: #d38d5f; color: white; border: none; border-radius: 30px; font-size: 18px; font-weight: bold; cursor: pointer;">送信する</button>
             </form>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <footer style="padding: 40px 20px; text-align: center;">
         <p>〒813-0013 福岡市東区香椎駅前2-4-9</p>
         <p>&copy; 2024 Day Service LOOP. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 
 </html>

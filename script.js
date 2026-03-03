@@ -38,20 +38,42 @@ document.addEventListener('DOMContentLoaded', () => {
     // Form submission handler
     const contactForm = document.querySelector('form');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            // Simulate form submission
+
             const btn = contactForm.querySelector('button');
             const originalText = btn.innerText;
             btn.innerText = '送信中...';
             btn.disabled = true;
 
-            setTimeout(() => {
-                alert('お問い合わせありがとうございます。\n担当者よりご連絡させていただきます。');
-                contactForm.reset();
+            const formData = new FormData(contactForm);
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    alert('お問い合わせありがとうございます。\n担当者よりご連絡させていただきます。');
+                    contactForm.reset();
+                } else {
+                    const data = await response.json();
+                    if (Object.hasOwn(data, 'errors')) {
+                        alert(data["errors"].map(error => error["message"]).join(", "));
+                    } else {
+                        alert('送信中にエラーが発生しました。しばらく時間をおいてから再度お試しください。');
+                    }
+                }
+            } catch (error) {
+                alert('送信中にエラーが発生しました。接続状況を確認してください。');
+            } finally {
                 btn.innerText = originalText;
                 btn.disabled = false;
-            }, 1500);
+            }
         });
     }
 });
