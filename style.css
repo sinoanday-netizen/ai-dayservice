@@ -115,7 +115,10 @@ nav {
     -webkit-text-fill-color: transparent;
     line-height: 1.2;
     padding-bottom: 0.2em;
-    /* 文字切れ防止 */
+}
+
+.mobile-br {
+    display: none;
 }
 
 /* ... (省略) ... */
@@ -285,6 +288,10 @@ footer p {
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2.5rem;
+    }
+
+    .mobile-br {
+        display: block;
     }
 
     .nav-links {
